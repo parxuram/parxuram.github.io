@@ -15,10 +15,10 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  title: 'Aria Wren — AI/ML & Electronics Engineer',
+  title: 'portfolio/mohit',
   description:
-    'The portfolio of Aria Wren, an AI/ML and electronics engineer. A cinematic, scroll-driven journey through projects, skills, and achievements.',
-  generator: 'v0.app',
+    'The portfolio of mohit sen, an AI/ML and electronics engineer. A cinematic, scroll-driven journey through projects, skills, and achievements.',
+  generator: 'self',
   icons: {
     icon: [
       {
