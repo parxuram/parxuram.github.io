@@ -1,9 +1,9 @@
 import { Reveal } from '@/components/reveal'
 
 const STATS = [
-  { value: '12+', label: 'Shipped projects' },
-  { value: '5', label: 'Hackathon wins' },
-  { value: '8.7', label: 'CGPA / 10' },
+  { value: 'ASK', label: 'why?' },
+  { value: 'BUILD', label: 'quick' },
+  { value: 'OPTIMISE', label: 'daily' },
 ]
 
 export function Intro() {
@@ -14,22 +14,20 @@ export function Intro() {
     >
       <Reveal>
         <p className="font-mono text-xs uppercase tracking-[0.35em] text-primary">
-          The short version
+          acerca de mí
         </p>
       </Reveal>
       <Reveal delay={80}>
         <h2 className="mt-6 max-w-3xl text-balance font-heading text-3xl font-medium leading-tight text-foreground sm:text-4xl md:text-5xl">
-          I teach machines to see, listen, and decide — then put them on
-          hardware that has to survive the real world.
+          LIKE A GARDENER, I BELIEVE GROWTH COMES FROM PATIENCE, 
+          OBSERVATION, AND COUNTLESS SMALL REFINEMENTS.
         </h2>
       </Reveal>
       <Reveal delay={140}>
         <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          My work lives at the seam between deep learning and embedded systems:
-          training models in PyTorch, squeezing them onto microcontrollers, and
-          wrapping the whole thing in software people actually enjoy using. I
-          care about latency, about edge cases, and about the small details
-          that make a system feel alive.
+          Electronics and Instrumentation Engineering student. 
+          Machine Learning enthusiast . 
+          Drawn to building intelligent systems that learn, adapt, and create impact.
         </p>
       </Reveal>
 
