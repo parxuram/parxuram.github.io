@@ -4,11 +4,9 @@ import { useEffect, useRef, useState } from 'react'
 import {
   ArrowUpRight,
   Brain,
-  Cpu,
   Code2,
   Boxes,
   GraduationCap,
-  Palette,
   FileText,
   Mail,
 } from 'lucide-react'
@@ -20,63 +18,53 @@ import { GithubIcon, LinkedinIcon } from '@/components/brand-icons'
  * ------------------------------------------------------------------------- */
 
 const STATS = [
-  { value: '12+', label: 'Shipped projects' },
-  { value: '5', label: 'Hackathon wins' },
-  { value: '8.7', label: 'CGPA / 10' },
+  { value: 'ASK', label: 'why?' },
+  { value: 'BUILD', label: 'quick' },
+  { value: 'OPTIMISE', label: 'daily' },
 ]
 
 const PROJECTS = [
   {
-    title: 'Edge Crop-Disease Scout',
+    title: 'Traffic Violation Detection & Analysis System',
     blurb:
-      'A TinyML pipeline that runs a quantized CNN on an ESP32-CAM to flag leaf diseases offline, in the field. Sub-200ms inference at 94% accuracy.',
-    tags: ['TFLite', 'ESP32', 'Quantization'],
-    year: '2025',
+      'An AI-powered computer vision system that detects traffic violations, tracks vehicles, recognizes license plates, and generates actionable traffic analytics from video streams.',
+    tags: ['YOLOv11', 'EasyOCR', 'OpenCV', 'Computer Vision'],
+    link: 'https://github.com/parxuram/emerald',
   },
   {
-    title: 'Lumen — RAG Assistant',
+    title: 'Traffic Demand Prediction',
     blurb:
-      'A document-grounded chat assistant that cites its sources. Hybrid vector + keyword retrieval over a pgvector store with a token-efficient prompt cache.',
-    tags: ['LangChain', 'pgvector', 'RAG'],
-    year: '2024',
+      'An ensemble forecasting pipeline for transportation demand — CatBoost, LightGBM, and XGBoost stacked with a Ridge meta-learner, tuned via Optuna, with engineered lag features pushing R\u00b2 past 91%.',
+    tags: ['CatBoost', 'LightGBM', 'Optuna', 'Feature Engineering'],
+    link: 'https://github.com/parxuram/FLIPKART-GRIDLOCK-2026',
   },
   {
-    title: 'Gesture-Piloted Quadcopter',
+    title: 'Adaptive AI Companion for Neurodivergence',
     blurb:
-      'Real-time hand-pose recognition turning webcam gestures into MAVLink flight commands via a lightweight MediaPipe + MLP classifier.',
-    tags: ['MediaPipe', 'PyTorch', 'MAVLink'],
-    year: '2024',
+      'An LLM-powered micro-task companion for neurodivergent users — breaks goals into bite-sized steps and adapts support in real time based on behavioral signals.',
+    tags: ['LLMs', 'Gemini', 'FastAPI', 'Human-Centered AI'],
+    link: 'https://github.com/parxuram/LLM_for_neurodivergence',
   },
   {
-    title: 'Neural Style Studio',
+    title: 'Khrishi_Mitra \u2013 (solution Framework)',
     blurb:
-      'A browser-based real-time style transfer tool. Feed-forward transformer nets exported to ONNX, running on-device with WebGPU.',
-    tags: ['ONNX', 'WebGPU', 'CNN'],
-    year: '2023',
+      'AI-powered farming assistant that predicts crop yield, detects pests and diseases, and provides personalized multilingual recommendations using weather, soil, and crop data.',
+    tags: ['Precision Agriculture', 'Crop Yield Prediction', 'AI Advisory'],
   },
 ]
 
 const EDUCATION = [
   {
-    school: 'Riverbend Institute of Technology',
-    degree: 'B.Tech, Electronics & Communication (AI/ML Minor)',
-    period: '2021 — 2025',
-    detail:
-      'Deep learning, DSP, embedded systems, computer architecture. Thesis on on-device inference for low-power sensors.',
+    school: 'Coursera (Andrew Ng)',
+    degree: 'Machine Learning & Deep Learning Specializations',
+    period: '2025 — 2026',
+    detail: 'PERCEPTION \u00b7 REASONING \u00b7 LEARNING',
   },
   {
-    school: 'Stanford Online (Self-paced)',
-    degree: 'ML & Deep Learning Specializations',
-    period: '2022 — 2023',
-    detail:
-      'Completed CS229 and the Deep Learning track, building from linear models up to transformers and sequence modeling.',
-  },
-  {
-    school: 'Greenfield Senior Secondary',
-    degree: 'Higher Secondary — PCM + Computer Science',
-    period: '2019 — 2021',
-    detail:
-      'Graduated top of cohort. Led the robotics club and built the school\u2019s first line-following robot.',
+    school: 'National Institute of Technology Silchar',
+    degree: 'B.Tech, Electronics & Instrumentation',
+    period: '2024 — 2028',
+    detail: 'SENSORS \u00b7 SIGNALS \u00b7 SYSTEMS',
   },
 ]
 
@@ -84,35 +72,32 @@ const SKILL_GROUPS = [
   {
     icon: Brain,
     title: 'Machine Learning',
-    items: ['PyTorch', 'TensorFlow', 'scikit-learn', 'Hugging Face', 'OpenCV'],
+    items: [
+      'PyTorch',
+      'TensorFlow (Keras)',
+      'scikit-learn',
+      'Hugging Face',
+      'OpenCV',
+      'Model quantization',
+    ],
   },
   {
     icon: Code2,
     title: 'Languages',
-    items: ['Python', 'C / C++', 'TypeScript', 'MATLAB', 'Verilog'],
-  },
-  {
-    icon: Cpu,
-    title: 'Embedded & Hardware',
-    items: ['ESP32 / STM32', 'Raspberry Pi', 'TinyML', 'I2C / SPI', 'PCB'],
+    items: ['Python', 'C / C++', 'TypeScript', 'MATLAB', 'SQL'],
   },
   {
     icon: Boxes,
     title: 'Tooling & Infra',
-    items: ['Git', 'Docker', 'Linux', 'FastAPI', 'ONNX Runtime'],
-  },
-  {
-    icon: Palette,
-    title: 'Design',
-    items: ['Figma', 'UI / UX', 'Prototyping', 'Design Systems', 'Branding'],
+    items: ['Git', 'Docker', 'FastAPI', 'pgvector', 'ONNX Runtime'],
   },
 ]
 
 const CONTACT_LINKS = [
-  { icon: Mail, label: 'Email', value: 'hello@ariawren.dev', href: 'mailto:hello@ariawren.dev' },
-  { icon: GithubIcon, label: 'GitHub', value: 'github.com/ariawren', href: 'https://github.com' },
-  { icon: LinkedinIcon, label: 'LinkedIn', value: 'in/ariawren', href: 'https://linkedin.com' },
-  { icon: FileText, label: 'Résumé', value: 'Download PDF', href: '#' },
+  { icon: Mail, label: 'Email', value: 'chukundarcodes@gmail.com', href: 'mailto:chukundarcodes@gmail.com' },
+  { icon: GithubIcon, label: 'GitHub', value: 'github.com/parxuram', href: 'https://github.com/parxuram' },
+  { icon: LinkedinIcon, label: 'LinkedIn', value: 'in/mohit-sen', href: 'https://www.linkedin.com/in/mohit-sen-7888ab317' },
+  { icon: FileText, label: 'R\u00e9sum\u00e9', value: 'Download PDF', href: '#' },
 ]
 
 /* Scene order also drives the nav anchors below. */
@@ -271,11 +256,10 @@ export function ScrollVideoStory() {
               Portfolio
             </p>
             <h1 className="mt-5 max-w-4xl text-balance font-heading text-5xl font-semibold leading-[1.05] text-white text-shadow-soft sm:text-6xl md:text-7xl lg:text-8xl">
-              Aria Wren
+              MOHIT SEN
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-base text-white/90 text-shadow-soft sm:text-lg md:text-xl">
-              AI/ML &amp; Electronics Engineer crafting intelligent systems that
-              live where software meets the physical world.
+              Attention Is All Curiosity Needs.
             </p>
           </div>
         </Scene>
@@ -283,16 +267,15 @@ export function ScrollVideoStory() {
         {/* ---- Scene 1: Intro ---- */}
         <Scene ref={registerPanel(1)}>
           <article className="glass-panel mx-auto w-full max-w-2xl rounded-4xl p-8 md:p-10">
-            <SceneLabel>The short version</SceneLabel>
+            <SceneLabel>acerca de mí</SceneLabel>
             <h2 className="mt-5 text-balance font-heading text-2xl font-medium leading-tight text-foreground sm:text-3xl md:text-4xl">
-              I teach machines to see, listen, and decide — then put them on
-              hardware that has to survive the real world.
+              LIKE A GARDENER, I BELIEVE GROWTH COMES FROM PATIENCE,
+              OBSERVATION, AND COUNTLESS SMALL REFINEMENTS.
             </h2>
             <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
-              My work lives at the seam between deep learning and embedded
-              systems: training models in PyTorch, squeezing them onto
-              microcontrollers, and wrapping it all in software people enjoy
-              using.
+              Electronics and Instrumentation Engineering student. Machine
+              Learning enthusiast. Drawn to building intelligent systems that
+              learn, adapt, and create impact.
             </p>
             <dl className="mt-8 grid grid-cols-3 gap-4 border-t border-border/60 pt-6">
               {STATS.map((stat) => (
@@ -323,9 +306,17 @@ export function ScrollVideoStory() {
                     <h3 className="font-heading text-lg font-semibold text-foreground">
                       {p.title}
                     </h3>
-                    <span className="font-mono text-xs text-muted-foreground">
-                      {p.year}
-                    </span>
+                    {p.link && (
+                      <a
+                        href={p.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-secondary/70 text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                        aria-label={`View ${p.title} on GitHub`}
+                      >
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </a>
+                    )}
                   </div>
                   <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground">
                     {p.blurb}
@@ -430,7 +421,7 @@ export function ScrollVideoStory() {
             </h2>
             <p className="mx-auto mt-5 max-w-md text-pretty leading-relaxed text-white/90 text-shadow-soft">
               I&apos;m open to internships, research collaborations, and
-              ambitious side projects. The inbox is always open.
+              ambitious side projects. The inbox is always open — say hello.
             </p>
             <div className="mx-auto mt-8 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-2">
               {CONTACT_LINKS.map((link) => {
@@ -458,7 +449,7 @@ export function ScrollVideoStory() {
               })}
             </div>
             <p className="mt-10 font-mono text-xs text-white/70 text-shadow-soft">
-              Designed &amp; built by Aria Wren · {new Date().getFullYear()}
+              Designed &amp; built by MOHIT SEN · {new Date().getFullYear()}
             </p>
           </div>
         </Scene>
