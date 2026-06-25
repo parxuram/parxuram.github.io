@@ -9,11 +9,10 @@ export function Hero() {
         Portfolio
       </p>
       <h1 className="mt-5 max-w-4xl text-balance font-heading text-5xl font-semibold leading-[1.05] text-white text-shadow-soft sm:text-6xl md:text-7xl lg:text-8xl">
-        Aria Wren
+        MOHIT SEN
       </h1>
       <p className="mt-6 max-w-xl text-pretty text-base text-white/90 text-shadow-soft sm:text-lg md:text-xl">
-        AI/ML &amp; Electronics Engineer crafting intelligent systems that live
-        where software meets the physical world.
+        Attention Is All Curiosity Needs.
       </p>
 
       <div className="absolute inset-x-0 bottom-10 flex flex-col items-center gap-3 text-white/85">
