@@ -11,25 +11,18 @@ interface Entry {
 
 const ENTRIES: Entry[] = [
   {
-    school: 'Riverbend Institute of Technology',
-    degree: 'B.Tech, Electronics & Communication (AI/ML Minor)',
-    period: '2021 — 2025',
-    detail:
-      'Coursework in deep learning, digital signal processing, embedded systems, and computer architecture. Thesis on on-device inference for low-power sensors.',
-  },
-  {
-    school: 'Stanford Online (Self-paced)',
+    school: 'coursera (Andrew Ng)',
     degree: 'Machine Learning & Deep Learning Specializations',
-    period: '2022 — 2023',
+    period: '2025 — 2026',
     detail:
-      'Completed the CS229 and Deep Learning specialization tracks, building from linear models up to transformers and sequence modeling.',
+      'PERCEPTION   REASONING   LEARNING',
   },
   {
-    school: 'Greenfield Senior Secondary',
-    degree: 'Higher Secondary — Physics, Math, Computer Science',
-    period: '2019 — 2021',
+    school: 'NATIONAL INSTITUTE OF TECHNOLOGY SILCHAR',
+    degree: 'B.Tech, Electronics & Instrumentation',
+    period: '2024 — 2028',
     detail:
-      'Graduated top of cohort. Led the robotics club and built the school\u2019s first line-following robot.',
+      'SENSORS   SIGNALS   SYSTEMS',
   },
 ]
 
