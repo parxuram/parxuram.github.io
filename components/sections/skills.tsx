@@ -15,7 +15,7 @@ const GROUPS: SkillGroup[] = [
     title: 'Machine Learning',
     items: [
       'PyTorch',
-      'TensorFlow / Keras',
+      'TensorFlow (Keras)',
       'scikit-learn',
       'Hugging Face',
       'OpenCV',
@@ -25,24 +25,12 @@ const GROUPS: SkillGroup[] = [
   {
     icon: Code2,
     title: 'Languages',
-    items: ['Python', 'C / C++', 'TypeScript', 'MATLAB', 'SQL', 'Verilog'],
-  },
-  {
-    icon: Cpu,
-    title: 'Embedded & Hardware',
-    items: [
-      'ESP32 / STM32',
-      'Raspberry Pi',
-      'Arduino',
-      'TinyML',
-      'I2C / SPI / UART',
-      'PCB prototyping',
-    ],
+    items: ['Python', 'C / C++', 'TypeScript', 'MATLAB', 'SQL'],
   },
   {
     icon: Boxes,
     title: 'Tooling & Infra',
-    items: ['Git', 'Docker', 'Linux', 'FastAPI', 'pgvector', 'ONNX Runtime'],
+    items: ['Git', 'Docker', 'FastAPI', 'pgvector', 'ONNX Runtime'],
   },
 ]
 
