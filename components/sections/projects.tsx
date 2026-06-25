@@ -11,32 +11,31 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    title: 'Edge Crop-Disease Scout',
+    title: 'Traffic Violation Detection & Analysis System',
     blurb:
-      'A TinyML pipeline that runs a quantized CNN on an ESP32-CAM to flag leaf diseases offline, in the field, with no cloud round-trip. Sub-200ms inference at 94% accuracy.',
-    tags: ['TensorFlow Lite', 'ESP32', 'Quantization', 'OpenCV'],
-    year: '2025',
+      'An AI-powered computer vision system that detects traffic violations, tracks vehicles, recognizes license plates, and generates actionable traffic analytics from video streams.',
+    tags: ['YOLOv11','EasyOCR','OpenCV','Computer Vision'],
+    link: 'https://github.com/parxuram/emerald',
   },
   {
-    title: 'Lumen — Retrieval-Augmented Assistant',
+    title: 'Traffic Demand Prediction',
     blurb:
-      'A document-grounded chat assistant that cites its sources. Hybrid vector + keyword retrieval over a pgvector store, streamed through a token-efficient prompt cache.',
-    tags: ['LangChain', 'pgvector', 'RAG', 'FastAPI'],
-    year: '2024',
+      'An LLM-powered microservice that breaks down tasks into micro-steps for neurodivergent users, with adaptive support based on real-time behavioral metrics.',
+    tags: ['CatBoost','LightGBM','Optuna','Feature Engineering'],
+    link: 'https://github.com/parxuram/FLIPKART-GRIDLOCK-2026',
   },
   {
-    title: 'Gesture-Piloted Quadcopter',
+    title: 'Adaptive AI Companion for Neurodivergence',
     blurb:
       'Real-time hand-pose recognition turning webcam gestures into MAVLink flight commands. Built a custom dataset and a lightweight MediaPipe + MLP classifier for low-latency control.',
-    tags: ['MediaPipe', 'PyTorch', 'MAVLink', 'Control'],
-    year: '2024',
+    tags: ['LLMs','Gemini','FastAPI','Human-Centered AI'],
+    link: 'https://github.com/parxuram/LLM_for_neurodivergence',
   },
   {
-    title: 'Neural Style Studio',
+    title: 'Khrishi_Mitra – (solution Framework)',
     blurb:
-      'A browser-based real-time style transfer tool. Trained feed-forward transformer networks exported to ONNX and ran them on-device with WebGPU for instant, private rendering.',
-    tags: ['ONNX', 'WebGPU', 'CNN', 'TypeScript'],
-    year: '2023',
+      'AI-powered farming assistant that predicts crop yield, detects pests and diseases, and provides personalized multilingual recommendations using weather, soil, and crop data.',
+    tags: ['Precision Agriculture','Crop Yield Prediction','AI Advisory'],
   },
 ]
 
