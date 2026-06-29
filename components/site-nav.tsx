@@ -35,7 +35,7 @@ export function SiteNav() {
           href="#top"
           className="font-heading text-base font-semibold tracking-tight text-foreground"
         >
-          Aria Wren
+          mohit
         </a>
         <ul className="hidden items-center gap-1 md:flex">
           {LINKS.map((link) => (
